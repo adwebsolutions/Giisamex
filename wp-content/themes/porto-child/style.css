@@ -1,0 +1,141 @@
+/*
+Theme Name: Porto Child
+Theme URI: http://newsmartwave.net/wordpress/porto
+Author: SW-THEMES
+Author URI: http://newsmartwave.net/
+Description: Porto Responsive Wordpress + eCommerce Theme.
+Version: 1.1
+Template: porto
+License: Commercial
+License URI: http://themeforest.net/licenses/regular_extended
+Tags: woocommerce, corporate, ecommerce, responsive, blue, black, green, white, light, dark, red, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: porto-child
+
+*/
+
+@import url("../porto/style.css");
+
+/*************** ADD YOUR CUSTOM CSS HERE  ***************/
+body.home  .main-content{
+	padding-top: 0 !important;
+}
+.mega-menu > li.menu-item > a{
+    padding: 9px 6px 8px;
+}
+
+.page-top .page-title {
+	text-transform: uppercase;
+}
+.page-top.page-header-1 .page-title {
+    margin-bottom: -5px !important;
+}
+#product-home .aio-icon-img  img {
+	border-radius: 15px !important;
+}
+#product-home .aio-icon-header {
+	text-align: left;
+	background: #2998cf;
+	padding: 0 8px;
+	float:left;
+	margin-top:-90px;
+	margin-left:5px;
+	position:relative;
+}
+#product-home .aio-icon-header:after{
+	clear: both;
+}
+#product-home .top-icon .aio-icon-header h3.aio-icon-title {
+	margin-bottom:0;
+}
+/*footer*/
+#footer .footer-ribbon::before {
+	border-right-color:#2998cf;
+}
+#footer h3.widget-title {
+	font-family: Raleway;
+	font-size: 16px;
+	border-bottom: 4px solid #2998cf;
+	display: inline-block;
+	line-height:36px;
+}
+#footer .follow-us h3.widget-title {
+	border-bottom:0;
+	margin-bottom:0;
+}
+#footer .textwidget{
+	font-size: 15px;
+	font-family:Raleway;
+}
+#footer .widget.follow-us .share-links a, .widget.follow-us .share-links a {
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    margin: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    font-size: 20px;
+}
+
+#footer .footer-bottom {
+    padding: 0;
+	font-size:14px;
+	font-family:Raleway;
+	line-height: 30px;
+}
+
+#footer .footer-bottom .container .footer-right {
+	width:150%
+}
+#header .header-main .container .header-left {
+	padding: 5px 0;
+}/*Contact Page*/
+.contact-page {
+	
+}
+/*Contact Form*/
+.wpcf7-form  .row {
+	margin-top: 5px;
+	font-family: Raleway;
+	font-size: 12px !important;
+}
+
+.contact-page .wpcf7-form input[type="email"], .contact-page .wpcf7-form input[type="number"], .contact-page .wpcf7-form input[type="password"], .contact-page .wpcf7-form input[type="search"], .contact-page .wpcf7-form input[type="tel"], .contact-page .wpcf7-form input[type="text"], .contact-page .wpcf7-form input[type="url"], .contact-page .wpcf7-form  input[type="color"], .contact-page .wpcf7-form  input[type="date"], .contact-page .wpcf7-form input[type="datetime"], .contact-page .wpcf7-form input[type="datetime-local"],.contact-page .wpcf7-form  input[type="month"], .contact-page .wpcf7-form input[type="time"],.contact-page .wpcf7-form  input[type="week"], .contact-page .wpcf7-form  select, .contact-page .wpcf7-form  textarea {
+	box-shadow:none;
+	border-radius:0;
+	width: 95%;
+	border: 0;
+	line-height: 24px;
+	border:1px solid #293389;
+}
+
+.contact-page .wpcf7-form  textarea {
+	height: 72px;
+}
+
+.contact-page .wpcf7-form  input[type="submit"]{
+	margin-top: 5px;
+	background: #293389;
+	border-radius: 0;
+	line-height:30px;
+	width:95%;
+}
+
+#footer .wpcf7-form input[type="email"], #footer .wpcf7-form input[type="number"], #footer .wpcf7-form input[type="password"], #footer .wpcf7-form input[type="search"], #footer .wpcf7-form input[type="tel"], #footer .wpcf7-form input[type="text"], #footer .wpcf7-form input[type="url"], #footer .wpcf7-form  input[type="color"], #footer .wpcf7-form  input[type="date"], #footer .wpcf7-form input[type="datetime"], #footer .wpcf7-form input[type="datetime-local"],#footer .wpcf7-form  input[type="month"], #footer .wpcf7-form input[type="time"],#footer .wpcf7-form  input[type="week"], #footer .wpcf7-form  select, #footer .wpcf7-form  textarea {
+	box-shadow:none;
+	border-radius:0;
+	width: 80%;
+	border: 0;
+	line-height: 24px;
+}
+
+#footer .wpcf7-form  textarea {
+	height: 36px;
+}
+
+#footer .wpcf7-form  input[type="submit"]{
+	margin-top: 5px;
+	background: #2998cf;
+}
