@@ -1,12 +1,20 @@
 <?php
 
 // function: post_type BEGIN
+register_activation_hook( __FILE__, function () {
+    post_type();
+    flush_rewrite_rules();
+} );
+register_deactivation_hook( __FILE__, function () {
+    flush_rewrite_rules();
+} );
+add_action( 'init', 'post_type' );
 function post_type() {
     $labels = array(
         'name'                  => _x( 'Products', 'porto-child' ),
         'singular_name'         => _x( 'Product', 'porto-child' ),
         'menu_name'             => _x( 'Products', 'admin menu', 'porto-child' ),
-        'add_new'               => _x( 'Add New', 'product','porto-child' ),
+        'add_new'               => _x( 'Add New', 'custom-product','porto-child' ),
         'add_new_item'          => __( 'Add New Product', 'porto-child' ),
         'edit_item'             => __( 'Edit Products', 'porto-child' ),
         'new_item'              => __( 'New Products', 'porto-child' ),
@@ -24,18 +32,21 @@ function post_type() {
         'show_ui'               => true,
         'show_in_menu'          => true,
         'query_var'             => true,
-        'rewrite'               => array( 'slug' => __( 'product' ) ),
+        'rewrite'               => array( 'slug' => __( 'custom-product' ) ),
         'capability_type'       => 'post',
         'has_archive'           => true,
         'hierarchical'          => false,
         'menu_position'         => null,
         'supports'              => array( 'title','editor', 'thumbnail', 'excerpt' )
     );
-    register_post_type(__( 'product' ), $args);
+    register_post_type(__( 'custom-product' ), $args);
 }
+
+
+
 function product_messages($messages)
 {
-    $messages[__( 'product' )] =
+    $messages[__( 'custom-product' )] =
         array(
             0 => '',
             1 => sprintf(('Product Updated. <a href="%s">View Product</a>'), esc_url(get_permalink($post_ID))),
@@ -57,20 +68,51 @@ function product_messages($messages)
 function product_filter()
 {
     register_taxonomy(
-        __( "product_category" ),
-        array(__( "product" )),
+        __( "custom-product-category" ),
+        array(__( "custom-product" )),
         array(
             "hierarchical" => true,
             "label" => __( "Categories" ),
             "singular_label" => __( "Category" ),
             "rewrite" => array(
-                'slug' => 'product_category',
+                'slug' => 'custom-product-category',
                 'hierarchical' => true
             )
         )
     );
 } // function: products_filter END
 
-add_action( 'init', 'post_type' );
 add_action( 'init', 'product_filter', 0 );
 add_filter( 'post_updated_messages', 'product_messages' );
+
+function taxonomy_slug_rewrite($wp_rewrite) {
+    $rules = array();
+    // get all custom taxonomies
+    $taxonomies = get_taxonomies(array('_builtin' => false), 'objects');
+    // get all custom post types
+    $post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
+
+    foreach ($post_types as $post_type) {
+        foreach ($taxonomies as $taxonomy) {
+
+            // go through all post types which this taxonomy is assigned to
+            foreach ($taxonomy->object_type as $object_type) {
+
+                // check if taxonomy is registered for this custom type
+                if ($object_type == $post_type->rewrite['slug']) {
+
+                    // get category objects
+                    $terms = get_categories(array('type' => $object_type, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
+
+                    // make rules
+                    foreach ($terms as $term) {
+                        $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
+                    }
+                }
+            }
+        }
+    }
+    // merge with global rules
+    $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
