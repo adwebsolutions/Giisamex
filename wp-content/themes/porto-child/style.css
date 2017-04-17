@@ -22,7 +22,15 @@ body.home  .main-content{
 .mega-menu > li.menu-item > a{
     padding: 9px 6px 8px;
 }
-
+#main-menu .mega-menu .wide .popup > .inner {
+	border-top:5px solid #2998CF;
+	border-radius: 10px;
+}
+.mega-menu .wide .popup > .inner > ul.sub-menu > li.menu-item > a {
+	text-transform: none;
+	font-family: Raleway;
+	font-size: 13px;
+}
 .page-top .page-title {
 	text-transform: uppercase;
 }
@@ -138,4 +146,94 @@ body.home  .main-content{
 #footer .wpcf7-form  input[type="submit"]{
 	margin-top: 5px;
 	background: #2998cf;
+}
+/*Archive page*/
+.custom-archive-list {
+	margin-left: 0;
+	padding-left: 0;
+}
+li.custom-post {
+	width: 31%;
+	margin:20px 1%;
+	padding: 0 5px;
+	display: inline-block;
+}
+li.custom-post img {
+	display: block;
+	width: 100%;
+	border-radius: 20px;
+}
+li.custom-post span.custom-cat-title {
+	display: block;
+	background: rgba(41,152,207,0.6);
+	padding: 10px 10px 30px 10px;
+	font-family: "Lato", sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-top: -80px;
+	margin-left: 5px;
+	position: relative;
+	float: left;
+}
+li.custom-post span.cat-prod-count {
+	display: block;
+	background: #454545;
+	padding: 10px;
+	font-family: "Lato", sans-serif;
+	font-size: 13px;
+	color: #ffffff;
+	margin-top: -45px;
+	margin-left: 20px;
+	position: relative;
+	float: left;
+}
+.archive.tax-product-cat .posts-grid .grid-box {
+	box-shadow: none ;
+	border-radius: 0;
+	padding: 10px;
+	position: relative;
+	z-index: 1;
+	border: 0;
+	background: #fff;
+}
+.archive.tax-product-cat .posts-grid .grid-box .img-thumbnail img {
+	padding: 0;
+	border: 2px solid #0370B1;
+	border-radius: 20px;
+}
+.archive.tax-product-cat article.post.post-title-simple .entry-title, .archive.tax-product-cat article.post.post-title-simple .entry-title a {
+	color:#3F4A52;
+	text-align: center;
+}
+.archive.tax-product-cat article.post-grid .post-image.single {
+	margin-bottom: 10px;
+}
+
+.archive.tax-product-cat .box-btn {
+	text-align: center;
+}
+.archive.tax-product-cat a.btn {
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+}
+.archive.tax-product-cat .pt-right {
+	float: none !important;
+}
+.archive.tax-product-cat .btn-primary {
+	background: #2998CF;
+	text-shadow: none;
+	font-family: Lato,sans-serif;
+	border: 1px solid #2998CF;
+	border-radius: 0;
+}
+.archive.tax-product-cat .btn-primary:hover, .archive.tax-product-cat .btn-primary:focus, .archive.tax-product-cat .btn-primary:active {
+	color: #2998CF;
+	background-color: #ffffff;
+	border-color: #2998CF;
+}
+.archive.tax-product-cat .btn.btn-xs {
+	line-height: 28px;
+	padding: 0 10px;
 }

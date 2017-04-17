@@ -1,0 +1,70 @@
+.wp_widget_plugin_box {
+    border-radius: 10px;
+    background: #FBFBFB;
+    padding:0 0 10px 0;
+}
+.wp_widget_plugin_box .widget-title {
+    background: #F5F5F5 !important;
+    line-height: 45px !important;
+    color: #2898CE !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding-left: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.widget > div > ul, .widget > ul {
+    margin-top: 0 !important;
+}
+.widget > div > ul li > ul, .widget > ul li > ul, .widget > div > ul li > ol, .widget > ul li > ol {
+    margin-bottom: 0 !important;
+    margin-left: 20px !important;
+}
+.custom-cat-list {
+    margin: 0 15px;
+}
+.custom-cat-list li {
+    border: 0 !important;
+    line-height: 20px !important;
+    padding: 10px 0 !important;
+    position: relative;
+}
+.custom-cat-list li a{
+    font-family: "Raleway",sans-serif;
+    font-size: 13px;
+    color: #3F4A52;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.custom-subcat-list li a{
+    font-weight: normal;
+    margin-right: 0;
+}
+.custom-subcat-list {
+    display: none;
+}
+.custom-cat-btn {
+    width: 20px;
+    height: 40px;
+}
+.custom-cat-btn:after {
+    cursor: hand;
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 0;
+    line-height: 40px;
+    color: red;
+    width: 20px;
+    height: 40px;
+    content: "\f0da";
+    top: 0;
+}
+
+.custom-subcat-btn {
+    display: block;
+    background: blue;
+    width: 20px;
+    height: 20px;
+    float: right;
+}

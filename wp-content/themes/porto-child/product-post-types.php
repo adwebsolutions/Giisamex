@@ -14,7 +14,7 @@ function post_type() {
         'name'                  => _x( 'Products', 'porto-child' ),
         'singular_name'         => _x( 'Product', 'porto-child' ),
         'menu_name'             => _x( 'Products', 'admin menu', 'porto-child' ),
-        'add_new'               => _x( 'Add New', 'custom-product','porto-child' ),
+        'add_new'               => _x( 'Add New', 'productc','porto-child' ),
         'add_new_item'          => __( 'Add New Product', 'porto-child' ),
         'edit_item'             => __( 'Edit Products', 'porto-child' ),
         'new_item'              => __( 'New Products', 'porto-child' ),
@@ -32,21 +32,21 @@ function post_type() {
         'show_ui'               => true,
         'show_in_menu'          => true,
         'query_var'             => true,
-        'rewrite'               => array( 'slug' => __( 'custom-product' ) ),
+        'rewrite'               => array( 'slug' => __( 'productc' ) ),
         'capability_type'       => 'post',
         'has_archive'           => true,
         'hierarchical'          => false,
         'menu_position'         => null,
         'supports'              => array( 'title','editor', 'thumbnail', 'excerpt' )
     );
-    register_post_type(__( 'custom-product' ), $args);
+    register_post_type(__( 'productc' ), $args);
 }
 
 
 
 function product_messages($messages)
 {
-    $messages[__( 'custom-product' )] =
+    $messages[__( 'productc' )] =
         array(
             0 => '',
             1 => sprintf(('Product Updated. <a href="%s">View Product</a>'), esc_url(get_permalink($post_ID))),
@@ -68,14 +68,15 @@ function product_messages($messages)
 function product_filter()
 {
     register_taxonomy(
-        __( "custom-product-category" ),
-        array(__( "custom-product" )),
+        __( "product-cat" ),
+        array(__( "productc" )),
         array(
             "hierarchical" => true,
-            "label" => __( "Categories" ),
-            "singular_label" => __( "Category" ),
+            "label" => __( "Product Categories" ),
+            "singular_label" => __( "Product Category" ),
+            "query_var" => true,
             "rewrite" => array(
-                'slug' => 'custom-product-category',
+                'slug' => 'product-cat',
                 'hierarchical' => true
             )
         )
