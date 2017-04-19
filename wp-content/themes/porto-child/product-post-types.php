@@ -11,10 +11,10 @@ register_deactivation_hook( __FILE__, function () {
 add_action( 'init', 'post_type' );
 function post_type() {
     $labels = array(
-        'name'                  => _x( 'Products', 'porto-child' ),
-        'singular_name'         => _x( 'Product', 'porto-child' ),
-        'menu_name'             => _x( 'Products', 'admin menu', 'porto-child' ),
-        'add_new'               => _x( 'Add New', 'productc','porto-child' ),
+        'name'                  => __( 'Products', 'porto-child' ),
+        'singular_name'         => __( 'Product', 'porto-child' ),
+        'menu_name'             => __( 'Products', 'admin menu', 'porto-child' ),
+        'add_new'               => __( 'Add New', 'productc','porto-child' ),
         'add_new_item'          => __( 'Add New Product', 'porto-child' ),
         'edit_item'             => __( 'Edit Products', 'porto-child' ),
         'new_item'              => __( 'New Products', 'porto-child' ),

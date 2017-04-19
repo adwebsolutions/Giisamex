@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Porto\n"
-"POT-Creation-Date: 2017-04-18 17:32-0400\n"
-"PO-Revision-Date: 2017-04-18 17:32-0400\n"
+"POT-Creation-Date: 2017-04-19 08:02-0400\n"
+"PO-Revision-Date: 2017-04-19 08:02-0400\n"
 "Last-Translator: \n"
 "Language-Team: porto <porto@example.com>\n"
 "Language: es_MX\n"
@@ -67,23 +67,29 @@ msgstr "Más Información"
 msgid "Category Image"
 msgstr "Imagen de la Categoría"
 
-#: product-post-types.php:14
-msgctxt "porto-child"
+#: functions.php:216
+msgid "Home"
+msgstr "Inicio"
+
+#: functions.php:263
+#, php-format
+msgid "Tag - %s"
+msgstr "Etiqueta - %s"
+
+#: functions.php:265
+#, php-format
+msgid "Product Tag - %s"
+msgstr "Etiqueta del producto - %s"
+
+#: product-post-types.php:14 product-post-types.php:16
 msgid "Products"
 msgstr "Productos"
 
 #: product-post-types.php:15
-msgctxt "porto-child"
 msgid "Product"
 msgstr "Producto"
 
-#: product-post-types.php:16
-msgctxt "admin menu"
-msgid "Products"
-msgstr "Productos"
-
 #: product-post-types.php:17
-msgctxt "productc"
 msgid "Add New"
 msgstr "Agregar Nuevo"
 
@@ -206,6 +212,22 @@ msgstr "Productos Relacionados"
 #: taxonomy-product-cat.php:1
 msgid "Apologies, but no results were found for the requested archive."
 msgstr "Lo sentimos, pero no se encontraron resultados."
+
+#~ msgctxt "porto-child"
+#~ msgid "Products"
+#~ msgstr "Productos"
+
+#~ msgctxt "porto-child"
+#~ msgid "Product"
+#~ msgstr "Producto"
+
+#~ msgctxt "admin menu"
+#~ msgid "Products"
+#~ msgstr "Productos"
+
+#~ msgctxt "productc"
+#~ msgid "Add New"
+#~ msgstr "Agregar Nuevo"
 
 #~ msgid "By "
 #~ msgstr "Por"

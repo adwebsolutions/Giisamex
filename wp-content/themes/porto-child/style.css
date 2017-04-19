@@ -112,8 +112,6 @@ body.home  .main-content{
 /*Contact Form*/
 .wpcf7-form  .row {
 	margin-top: 5px;
-	font-family: Raleway;
-	font-size: 12px !important;
 }
 
 .contact-page .wpcf7-form input[type="email"], .contact-page .wpcf7-form input[type="number"], .contact-page .wpcf7-form input[type="password"], .contact-page .wpcf7-form input[type="search"], .contact-page .wpcf7-form input[type="tel"], .contact-page .wpcf7-form input[type="text"], .contact-page .wpcf7-form input[type="url"], .contact-page .wpcf7-form  input[type="color"], .contact-page .wpcf7-form  input[type="date"], .contact-page .wpcf7-form input[type="datetime"], .contact-page .wpcf7-form input[type="datetime-local"],.contact-page .wpcf7-form  input[type="month"], .contact-page .wpcf7-form input[type="time"],.contact-page .wpcf7-form  input[type="week"], .contact-page .wpcf7-form  select, .contact-page .wpcf7-form  textarea {
@@ -122,7 +120,9 @@ body.home  .main-content{
 	width: 95%;
 	border: 0;
 	line-height: 24px;
-	border:1px solid #293389;
+	border:1px solid #2898CE;
+	font-family: Raleway;
+	font-size: 12px !important;
 }
 
 .contact-page .wpcf7-form  textarea {
@@ -131,18 +131,35 @@ body.home  .main-content{
 
 .contact-page .wpcf7-form  input[type="submit"]{
 	margin-top: 5px;
-	background: #293389;
+	background: #2898CE;
 	border-radius: 0;
 	line-height:30px;
 	width:95%;
+	border-color:#2898CE;
+}
+.contact-page .wpcf7-form-control::-webkit-input-placeholder {
+    color: #283388 !important;
 }
 
+.contact-page .wpcf7-form-control:-moz-placeholder {
+    color: #283388 !important;
+}
+
+.contact-page .wpcf7-form-control::-moz-placeholder {
+    color: #283388 !important;
+}
+
+.contact-page .wpcf7-form-control:-ms-input-placeholder {
+    color: #283388 !important;
+}
 #footer .wpcf7-form input[type="email"], #footer .wpcf7-form input[type="number"], #footer .wpcf7-form input[type="password"], #footer .wpcf7-form input[type="search"], #footer .wpcf7-form input[type="tel"], #footer .wpcf7-form input[type="text"], #footer .wpcf7-form input[type="url"], #footer .wpcf7-form  input[type="color"], #footer .wpcf7-form  input[type="date"], #footer .wpcf7-form input[type="datetime"], #footer .wpcf7-form input[type="datetime-local"],#footer .wpcf7-form  input[type="month"], #footer .wpcf7-form input[type="time"],#footer .wpcf7-form  input[type="week"], #footer .wpcf7-form  select, #footer .wpcf7-form  textarea {
 	box-shadow:none;
 	border-radius:0;
 	width: 80%;
 	border: 0;
 	line-height: 24px;
+	font-size:12px;
+	font-family:Raleway,san-serif;
 }
 
 #footer .wpcf7-form  textarea {
@@ -152,6 +169,21 @@ body.home  .main-content{
 #footer .wpcf7-form  input[type="submit"]{
 	margin-top: 5px;
 	background: #2998cf;
+}
+#footer  .wpcf7-form-control::-webkit-input-placeholder {
+    color: #283388 !important;
+}
+
+#footer  .wpcf7-form-control:-moz-placeholder {
+    color: #283388 !important;
+}
+
+#footer  .wpcf7-form-control::-moz-placeholder {
+    color: #283388 !important;
+}
+
+#footer  .wpcf7-form-control:-ms-input-placeholder {
+    color: #283388 !important;
 }
 /*Archive page*/
 .custom-archive-list {

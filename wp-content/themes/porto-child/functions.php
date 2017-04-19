@@ -267,6 +267,10 @@ function porto_child_breadcrumbs() {
                 if ( is_category() && get_option( 'show_on_front' ) == 'page' && (isset($porto_settings['breadcrumbs-blog-link']) && $porto_settings['breadcrumbs-blog-link']) ) {
                     $output .= porto_breadcrumbs_link( get_the_title( get_option('page_for_posts', true) ), get_permalink( get_option('page_for_posts' ) ) );
                 }
+//Added
+                if ( is_tax('product-cat') ) {
+                    $output .= porto_breadcrumbs_link( porto_breadcrumbs_archive_name('productc'), get_post_type_archive_link( 'productc' ) );
+                }
 
                 if ( is_tax('portfolio_cat') || is_tax('portfolio_skills') ) {
                     $output .= porto_breadcrumbs_link( porto_breadcrumbs_archive_name('portfolio'), get_post_type_archive_link( 'portfolio' ) );
@@ -334,4 +338,3 @@ function porto_child_breadcrumbs() {
     return apply_filters('porto_breadcrumbs', $output);
 
 }
-
