@@ -15,6 +15,7 @@ Text Domain: porto-child
 
 @import url("../porto/style.css");
 
+
 /*************** ADD YOUR CUSTOM CSS HERE  ***************/
 body.home  .main-content{
 	padding-top: 0 !important;
