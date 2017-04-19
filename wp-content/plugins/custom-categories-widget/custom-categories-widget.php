@@ -79,75 +79,117 @@ class custom_cat_widget extends WP_Widget {
 		extract( $args );
 
 		$title = apply_filters('widget_title', $instance['title']);
-		$text = $instance['text'];
-		$textarea = $instance['textarea'];
-
-		echo $before_widget;
-
-
-		echo '<div class="widget-text wp_widget_plugin_box">';
-
+		echo $before_widget;?>
+		<div class="widget-text wp_widget_plugin_box">
+		<?php
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
 		$parents_cat_list = get_terms('product-cat', array( 'parent' => 0 ) );
 
 
-		if ( $parents_cat_list && !is_wp_error( $parents_cat_list ) ) {
-
-			echo '<ul class="custom-cat-list">';
-			foreach( $parents_cat_list as $parent_cat ):
-				$term_id = $parent_cat->term_id;
-				echo '<li class="custom-cat-item">';
-				echo '<a href="' . get_term_link( $parent_cat ) . '">';
-				echo '<span class="custom-cat-title-item">' . $parent_cat->name . '</span>';
-				echo '</a><span class="custom-cat-btn"></span>';
-				if ($parent_cat->count > 0)
-				{
-					$child_list = get_term_children($term_id,'product-cat');
-					echo '<ul class="custom-subcat-list">';
-					foreach ($child_list as $child){
-						$child_item = get_term($child);
-						if($child_item)
-						{
-							echo '<li class="custom-subcat-item">';
-							echo '<a href="' . get_term_link( $child_item->term_id ) . '">';
-							echo '<span class="custom-subcat-title-item">' . $child_item->name . '</span>';
-							echo '</a><span class="custom-subcat-btn"></span>';
-							$arg_post = array (
-								'posts_per_page' => -1,
-								'post_type' => 'productc',
-								'order' => 'ASC',
-								'orderby' => 'ID',
-								'tax_query' => [
+		if ( $parents_cat_list && !is_wp_error( $parents_cat_list ) ) { ?>
+			<ul class="custom-cat-list">
+			<?php foreach( $parents_cat_list as $parent_cat ): ?>
+				<?php $term_id = $parent_cat->term_id; ?>
+				<?php $child_list = get_term_children($term_id,'product-cat');
+				?>
+				<li class="custom-cat-item">
+				<?php if (($parent_cat->count == 1)&&(count($child_list)==0)) {
+					$arg_post = array (
+							'posts_per_page' => -1,
+							'post_type' => 'productc',
+							'order' => 'ASC',
+							'orderby' => 'ID',
+							'tax_query' => [
 									'relation' => 'AND',[
-									'taxonomy' => 'product-cat',
-									'terms' => $child_item->term_id,
-									'field' => 'term_id',
-									'include_children' => true,           //(bool) - Whether or not to include children for hierarchical taxonomies. Defaults to true.
-									'operator' => 'IN'
+											'taxonomy' => 'product-cat',
+											'terms' => $term_id,
+											'field' => 'term_id',
+											'operator' => 'IN'
 									]
-								]);
+							]);
+					$wpbp = new WP_Query($arg_post );
+					if ($wpbp->post_count == 1){
+						$post_link = get_post_permalink($wpbp->posts[0]->ID);
+					}?>
+					<a href="<?php echo $post_link;?>">
+						<span class="custom-cat-title-item"><?php echo $parent_cat->name;?></span>
+					</a>
+					<?php wp_reset_query();
+				?>
+				<?php }?>
 
-							$wpbp = new WP_Query($arg_post );
-							echo '<ul class="custom-post-list">';
-							if ($wpbp->have_posts()) :  while ($wpbp->have_posts()) : $wpbp->the_post(); ?>
-								<li>
-									<div class="">
-										<a href="<?php the_permalink(); ?>"><?php echo get_the_title();  ?></a>
-									</div>
-								</li>
-							<?php endwhile; endif;
-								echo '</ul>';?>
-							<?php wp_reset_query();
-							echo '</li>';
-						}
-					}
-					echo '</ul>';
-				}
-				echo '</li> ';
-			endforeach;
-			echo'</ul>';
+				<?php if ($parent_cat->count > 1) { ?>
+					<a href="<?php echo get_term_link( $parent_cat );?>">
+						<span class="custom-cat-title-item"><?php echo $parent_cat->name;?></span>
+					</a>
+					<span class="custom-cat-btn"></span>
+
+					<ul class="custom-subcat-list">
+					<?php foreach ($child_list as $child){
+							$child_item = get_term($child);
+							if($child_item) {
+								$arg_post = array (
+										'posts_per_page' => -1,
+										'post_type' => 'productc',
+										'order' => 'ASC',
+										'orderby' => 'ID',
+										'tax_query' => [
+												'relation' => 'AND',[
+														'taxonomy' => 'product-cat',
+														'terms' => $child_item->term_id,
+														'field' => 'term_id',
+														'operator' => 'IN'
+												]
+										]);
+								$wpbp = new WP_Query($arg_post );
+								$subcat_class = "custom-subcat-btn";
+								if ($wpbp->post_count == 1){
+									$post_link = get_post_permalink($wpbp->posts[0]->ID);
+								?>
+						<li class="custom-subcat-item">
+							<a href="<?php echo $post_link; ?>">
+								<span class="custom-subcat-title-item"><?php echo $child_item->name; ?></span>
+							</a>
+							<span class="<?php echo $subcat_class; ?>"></span>
+									<?php
+									wp_reset_query();
+								}
+								elseif ($wpbp->post_count > 1) {
+									$subcat_class .= " has-post";
+									?>
+						<li class="custom-subcat-item">
+							<a href="<?php echo get_term_link( $child_item->term_id ); ?>">
+								<span class="custom-subcat-title-item"><?php echo $child_item->name; ?></span>
+							</a>
+							<span class="<?php echo $subcat_class;?>"></span>
+								<ul class="custom-post-list">
+									<?php
+									if ($wpbp->have_posts()) :
+										while ($wpbp->have_posts()) : $wpbp->the_post(); ?>
+									<li>
+										<div class="">
+											<a href="<?php the_permalink(); ?>"><?php echo get_the_title();  ?></a>
+										</div>
+									</li>
+										<?php endwhile;
+									endif;?>
+								</ul>
+									<?php wp_reset_query();
+								}
+								?>
+						</li>
+						<?php
+							}
+						}?>
+					</ul>
+				<?php } ?>
+				</li>
+
+			<?php endforeach;?>
+			</ul>
+<?php
 		}
 		echo $after_widget;
 	}
@@ -160,7 +202,7 @@ class custom_cat_widget extends WP_Widget {
 	function register_plugin_styles() {
 		wp_register_style( 'custom-categories-widget', plugins_url( 'custom-categories-widget/inc/style.css' ) );
 		wp_enqueue_style( 'custom-categories-widget' );
-		wp_enqueue_style('font-awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+		//wp_enqueue_style('font-awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 		wp_register_script( 'custom', plugins_url('custom-categories-widget/inc/custom.js'), array(), '1.0.0', true );
 		wp_enqueue_script( 'custom' );
 	}

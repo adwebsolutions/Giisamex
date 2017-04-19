@@ -1,23 +1,17 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Porto\n"
-"POT-Creation-Date: 2017-04-18 16:49-0400\n"
-"PO-Revision-Date: 2016-10-27 15:33+0800\n"
-"Last-Translator: porto <porto@example.com>\n"
-"Language-Team: porto <porto@example.com>\n"
-"Language: en_GB\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-04-18 17:07-0400\n"
+"PO-Revision-Date: 2017-04-18 17:30-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.12\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:13 inc/functions/layout/breadcrumbs.php:241
 msgid "404"
@@ -25,7 +19,7 @@ msgstr ""
 
 #: 404.php:14
 msgid "We're sorry, but the page you were looking for doesn't exist."
-msgstr ""
+msgstr "Lo sentimos, pero la página que busca no está disponible."
 
 #: archive-faq.php:85 archive-member.php:101 archive-portfolio.php:105
 #: inc/functions/layout.php:2064 inc/functions/layout.php:2071
@@ -35,44 +29,49 @@ msgstr ""
 #: inc/functions/layout.php:2305 inc/functions/layout.php:2312
 #: taxonomy-faq_cat.php:83 taxonomy-portfolio_cat.php:109
 msgid "Show All"
-msgstr ""
+msgstr "Ver Todo"
 
 #: archive-faq.php:115 archive-member.php:131 archive-portfolio.php:168
 #: index.php:84 taxonomy-faq_cat.php:112 taxonomy-member_cat.php:76
 #: taxonomy-portfolio_cat.php:172 taxonomy-portfolio_skills.php:108
 msgid "Apologies, but no results were found for the requested archive."
-msgstr ""
+msgstr "Lo sentimos, pero no se encontraron resultados."
 
 #: archive-member.php:56 taxonomy-member_cat.php:53
 #, php-format
 msgid "More %s:"
-msgstr ""
+msgstr "Más %s:"
 
 #: archive.php:101 search.php:91
 msgid "Nothing Found"
-msgstr ""
+msgstr "No se ha encontrado nada"
 
 #: archive.php:105 search.php:95
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"¿Listo para publicar tu primer post? <a href=\"%1$s\">Comienza aquí</ a>."
 
 #: archive.php:109 search.php:99
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with "
 "different keywords."
 msgstr ""
+"Lo sentimos, ninguna publicación fue encontrada con los términos de búsqueda "
+"que ingresaste. Por favor trata de nuevo con diferentes palabras."
 
 #: archive.php:114 search.php:104
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Tal vez, ayudaría "
+"haciendo una búsqueda."
 
 #: comments.php:7
 msgid "Please do not load this page directly. Thanks!"
-msgstr ""
+msgstr "Por favor, no cargue esta página directamente. Gracias!"
 
 #: comments.php:10
 msgid "This post is password protected. Enter the password to view comments."
@@ -88,7 +87,7 @@ msgstr[1] ""
 
 #: comments.php:53
 msgid "Comments are closed."
-msgstr ""
+msgstr "Los comentarios están cerrados."
 
 #: content-archive-faq.php:23 content-archive-portfolio-full.php:199
 #: content-archive-portfolio-large.php:207
@@ -104,7 +103,7 @@ msgstr ""
 #: content-post-full.php:115 content-post-large-alt.php:117
 #: content-post-large.php:117 content-post-medium.php:81
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: content-archive-faq.php:27 content-archive-portfolio-full.php:203
 #: content-archive-portfolio-large.php:211
@@ -121,12 +120,12 @@ msgstr ""
 #: content-post-large.php:121 content-post-medium.php:85
 #: inc/admin/theme_options/settings.php:3023
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: content-archive-member.php:85 content-member-item.php:68
 #: inc/admin/theme_options/settings.php:4294
 msgid "View More..."
-msgstr ""
+msgstr "Ver Más..."
 
 #: content-archive-member.php:126 content-member-item.php:110
 msgid "..."
@@ -213,7 +212,7 @@ msgstr ""
 #: content-archive-portfolio-large.php:220
 #: content-archive-portfolio-medium.php:221
 msgid "Learn More"
-msgstr ""
+msgstr "Ver Más"
 
 #: content-archive-portfolio-full.php:222
 #: content-archive-portfolio-large.php:230
@@ -225,7 +224,7 @@ msgstr ""
 #: content-portfolio-medium.php:264 inc/admin/theme_options/settings.php:3611
 #: inc/admin/theme_options/settings.php:3629
 msgid "Skills"
-msgstr ""
+msgstr "Habilidades"
 
 #: content-archive-portfolio-full.php:233
 #: content-archive-portfolio-large.php:241
@@ -237,7 +236,7 @@ msgstr ""
 #: content-portfolio-medium.php:275 inc/admin/theme_options/settings.php:3612
 #: inc/admin/theme_options/settings.php:3630 inc/content_types/portfolio.php:81
 msgid "Location"
-msgstr ""
+msgstr "Ubicación"
 
 #: content-archive-portfolio-full.php:239
 #: content-archive-portfolio-large.php:247
@@ -248,13 +247,13 @@ msgstr ""
 #: content-portfolio-masonry.php:225 content-portfolio-medias.php:217
 #: content-portfolio-medium.php:282 inc/admin/theme_options/settings.php:3613
 msgid "Client"
-msgstr ""
+msgstr "Cliente"
 
 #: content-archive-portfolio-grid.php:172
 #: content-archive-portfolio-masonry.php:171 content-portfolio-item.php:88
 #: inc/admin/theme_options/settings.php:3824
 msgid "View Project..."
-msgstr ""
+msgstr "Ver Proyecto..."
 
 #: content-blog-full.php:108 content-blog-grid.php:122
 #: content-blog-large-alt.php:109 content-blog-large.php:109
@@ -266,7 +265,7 @@ msgstr ""
 #: content-post-large-alt.php:91 content-post-large.php:91
 #: content-post-medium.php:99
 msgid "By"
-msgstr ""
+msgstr "Por"
 
 #: content-blog-full.php:119 content-blog-grid.php:133
 #: content-blog-large-alt.php:120 content-blog-large.php:120
@@ -277,7 +276,7 @@ msgstr ""
 #: content-post-large-alt.php:102 content-post-large.php:102
 #: content-post-medium.php:110
 msgid "0 Comments"
-msgstr ""
+msgstr "0 Comentarios"
 
 #: content-blog-full.php:119 content-blog-grid.php:133
 #: content-blog-large-alt.php:120 content-blog-large.php:120
@@ -288,7 +287,7 @@ msgstr ""
 #: content-post-large-alt.php:102 content-post-large.php:102
 #: content-post-medium.php:110
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Comentario"
 
 #: content-blog-full.php:119 content-blog-grid.php:133
 #: content-blog-large-alt.php:120 content-blog-large.php:120
@@ -299,29 +298,29 @@ msgstr ""
 #: content-post-large-alt.php:102 content-post-large.php:102
 #: content-post-medium.php:110 inc/admin/theme_options/settings.php:3099
 msgid "Comments"
-msgstr ""
+msgstr "Comentarios"
 
 #: content-blog-full.php:128 content-blog-grid.php:144
 #: content-blog-large-alt.php:129 content-blog-large.php:129
 #: content-blog-medium.php:129 content-blog-timeline.php:142
 msgid "Read more..."
-msgstr ""
+msgstr "Leer Más..."
 
 #: content-member-portfolios.php:26
 msgid "My <strong>Work</strong>"
-msgstr ""
+msgstr "Mi <strong>Trabajo</strong>"
 
 #: content-member-posts.php:26
 msgid "My <strong>Posts</strong>"
-msgstr ""
+msgstr "Mis <strong>Entradas</strong>"
 
 #: content-member-products.php:11
 msgid "My <strong>Products</strong>"
-msgstr ""
+msgstr "Mis <strong>Productos</strong>"
 
 #: content-member.php:168
 msgid "More Info"
-msgstr ""
+msgstr "Más Información"
 
 #: content-portfolio-carousel.php:34 content-portfolio-extended.php:32
 #: content-portfolio-full-images.php:31 content-portfolio-full-video.php:31
@@ -329,7 +328,7 @@ msgstr ""
 #: content-portfolio-large.php:30 content-portfolio-masonry.php:30
 #: content-portfolio-medias.php:30 content-portfolio-medium.php:30
 msgid "Back to list"
-msgstr ""
+msgstr "Volver al listado"
 
 #: content-portfolio-carousel.php:40 content-portfolio-extended.php:38
 #: content-portfolio-full-images.php:38 content-portfolio-full-video.php:37
@@ -338,7 +337,7 @@ msgstr ""
 #: content-portfolio-medias.php:36 content-portfolio-medium.php:37
 #: functions.php:488 woocommerce/myaccount/orders.php:98
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: content-portfolio-carousel.php:41 content-portfolio-extended.php:39
 #: content-portfolio-full-images.php:39 content-portfolio-full-video.php:38
@@ -347,7 +346,7 @@ msgstr ""
 #: content-portfolio-medias.php:37 content-portfolio-medium.php:38
 #: functions.php:489 woocommerce/myaccount/orders.php:102
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: content-portfolio-carousel.php:218 content-portfolio-full-images.php:149
 #: content-portfolio-full-video.php:153 content-portfolio-full.php:239
@@ -355,7 +354,7 @@ msgstr ""
 #: content-portfolio-masonry.php:162 content-portfolio-medias.php:154
 #: content-portfolio-medium.php:188
 msgid "Project Description"
-msgstr ""
+msgstr "Descripción del proyecto"
 
 #: content-portfolio-carousel.php:239 content-portfolio-extended.php:175
 #: content-portfolio-full-images.php:170 content-portfolio-full-video.php:174
@@ -364,7 +363,7 @@ msgstr ""
 #: content-portfolio-medias.php:175 content-portfolio-medium.php:240
 #: inc/content_types/portfolio.php:68
 msgid "More Information"
-msgstr ""
+msgstr "Más Información"
 
 #: content-portfolio-carousel.php:251 content-portfolio-extended.php:187
 #: content-portfolio-full-images.php:182 content-portfolio-full-video.php:186
@@ -372,7 +371,7 @@ msgstr ""
 #: content-portfolio-large.php:262 content-portfolio-masonry.php:195
 #: content-portfolio-medias.php:187 content-portfolio-medium.php:252
 msgid "Live Preview"
-msgstr ""
+msgstr "Vista Previa"
 
 #: content-portfolio-carousel.php:308 content-portfolio-extended.php:251
 #: content-portfolio-full-images.php:239 content-portfolio-full-video.php:243
@@ -382,12 +381,12 @@ msgstr ""
 #: inc/content_types/page.php:10 inc/content_types/portfolio.php:136
 #: inc/content_types/post.php:52 inc/content_types/product.php:43
 msgid "Share"
-msgstr ""
+msgstr "Compartir"
 
 #: content-portfolio-carousel.php:325 content-portfolio-medias.php:261
 #: single-portfolio.php:48
 msgid "Related <strong>Work</strong>"
-msgstr ""
+msgstr "<strong>Trabajos </strong> Relacionados"
 
 #: content-portfolio-carousel.php:347 content-portfolio-carousel.php:349
 #: content-portfolio-extended.php:264 content-portfolio-extended.php:266
@@ -406,30 +405,30 @@ msgstr ""
 #: inc/admin/theme_options/settings.php:3096
 #: inc/admin/theme_options/settings.php:3614
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: content-portfolio-full-video.php:258
 msgid "Project Gallery"
-msgstr ""
+msgstr "Galería de Proyecto"
 
 #: content-post-full.php:136 content-post-large-alt.php:138
 #: content-post-large.php:138 content-post-medium.php:128 page.php:72
 msgid "Share this post"
-msgstr ""
+msgstr "Compartir"
 
 #: content-post-item-no-image.php:30 content-post-item.php:60
 #: inc/functions/post.php:155
 msgid "Read More"
-msgstr ""
+msgstr "Leer Más"
 
 #: functions.php:127 inc/admin/theme_options/settings.php:1218
 #: inc/functions/content_type/meta_fields.php:109
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú Principal"
 
 #: functions.php:128 inc/functions/content_type/meta_fields.php:117
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "Barra Lateral"
 
 #: functions.php:129
 msgid "Top Navigation"
@@ -437,11 +436,11 @@ msgstr ""
 
 #: functions.php:130
 msgid "View Switcher"
-msgstr ""
+msgstr "Ver Cambiador"
 
 #: functions.php:131
 msgid "Currency Switcher"
-msgstr ""
+msgstr "Cambiador Monedas "
 
 #: functions.php:484
 msgid "%curr% of %total%"
@@ -457,7 +456,7 @@ msgstr ""
 
 #: functions.php:487
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: functions.php:490
 msgid "The requested content cannot be loaded.<br/>Please try again later."
@@ -1005,7 +1004,7 @@ msgstr ""
 
 #: inc/admin/admin_pages/system-status.php:45
 msgid "Home URL:"
-msgstr ""
+msgstr "URL de Inicio:"
 
 #: inc/admin/admin_pages/system-status.php:49
 msgid "Site URL:"
@@ -3338,7 +3337,7 @@ msgstr ""
 #: inc/functions/content_type/meta_values.php:256
 #: woocommerce/single-product-reviews.php:64
 msgid "Name"
-msgstr ""
+msgstr "Tu Nombre"
 
 #: inc/admin/theme_options/settings.php:3568
 msgid "Portfolios"
@@ -3926,7 +3925,7 @@ msgstr ""
 
 #: inc/admin/theme_options/settings.php:4715
 msgid "Show Wishlist"
-msgstr ""
+msgstr "Mostrar Lista de Deseos"
 
 #: inc/admin/theme_options/settings.php:4723
 msgid "Show Quick View"
@@ -3938,7 +3937,7 @@ msgstr ""
 
 #: inc/admin/theme_options/settings.php:4741
 msgid "Single Product"
-msgstr ""
+msgstr "Producto"
 
 #: inc/admin/theme_options/settings.php:4761
 msgid "Show Prev/Next Product"
@@ -4012,11 +4011,11 @@ msgstr ""
 
 #: inc/admin/theme_options/settings.php:4831
 msgid "Show Related Products"
-msgstr ""
+msgstr "Mostrar Productos Relacionados"
 
 #: inc/admin/theme_options/settings.php:4840
 msgid "Related Products Count"
-msgstr ""
+msgstr "Cantidad de Productos Relacionados"
 
 #: inc/admin/theme_options/settings.php:4847
 msgid "Related Product Columns"
@@ -4930,7 +4929,7 @@ msgstr ""
 
 #: inc/functions/layout/breadcrumbs.php:39
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: inc/functions/layout/breadcrumbs.php:84
 #: inc/functions/layout/page-title.php:59

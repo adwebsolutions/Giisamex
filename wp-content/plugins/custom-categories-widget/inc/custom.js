@@ -10,19 +10,24 @@ jQuery(document).ready(function (jq) {
     jq('.custom-cat-item .custom-cat-btn').click(function(){
         parentDivs.slideUp();
         childDivs.slideUp();
+        parentHeadings.children('.custom-cat-btn').removeClass('active');
         if(jq(this).next().is(':hidden')){
             jq(this).next().slideDown();
+            jq(this).addClass('active');
         }else{
             jq(this).next().slideUp();
+            jq(this).removeClass('active');
         }
     });
-    jq('.custom-subcat-item .custom-subcat-btn').click(function(){
-        childHeading.removeClass('showing');
+    jq('.custom-subcat-item .custom-subcat-btn.has-post').click(function(){
+        childHeading.children('.has-post').removeClass('active');
         childDivs.slideUp();
         if(jq(this).next().is(':hidden')){
             jq(this).next().slideDown();
+            jq(this).addClass('active');
         }else{
             jq(this).next().slideUp();
+            jq(this).removeClass('active');
         }
     });
 });

@@ -33,31 +33,8 @@ if ($post_infinite) {
     }
 }
 ?>
-
-<div id="content" role="main" class="<?php if ($porto_layout === 'widewidth' || $porto_layout === 'wide-left-sidebar' || $porto_layout === 'wide-right-sidebar') { echo 'm-t-lg m-b-xl'; if (porto_get_wrapper_type() !=='boxed') echo ' m-r-md m-l-md'; } ?>">
     <?php if ( have_posts() ) : ?>
-        <?php if (category_description()) : ?>
-            <div class="page-content">
-                <?php echo category_description() ?>
-            </div>
-        <?php endif; ?>
-		<?php if ($post_layout == 'timeline') {
-            global $prev_post_year, $prev_post_month, $first_timeline_loop, $post_count;
-            $prev_post_year = null;
-            $prev_post_month = null;
-            $first_timeline_loop = false;
-            $post_count = 1;
-            ?>
-        <div class="blog-posts posts-<?php echo $post_layout ?><?php if ($post_infinite) echo ' infinite-container' ?><?php if ($porto_settings['post-style'] == 'related') : ?> blog-posts-related<?php endif; ?>">
-            <section class="timeline">
-                <div class="timeline-body<?php if ($post_infinite) echo ' posts-infinite' ?>"<?php if ($post_infinite) : ?> data-pagenum="<?php echo esc_attr($page_num) ?>" data-pagemaxnum="<?php echo esc_attr($page_max_num) ?>" data-path="<?php echo esc_url($page_path) ?>"<?php endif; ?>>
-        <?php } else if ($post_layout == 'grid') { ?>
-        <div class="blog-posts posts-<?php echo $post_layout ?><?php if ($post_infinite) echo ' infinite-container' ?><?php if ($porto_settings['post-style'] == 'related') : ?> blog-posts-related<?php endif; ?>">
 
-            <div class="grid row<?php if ($post_infinite) echo ' posts-infinite' ?>"<?php if ($post_infinite) : ?> data-pagenum="<?php echo esc_attr($page_num) ?>" data-pagemaxnum="<?php echo esc_attr($page_max_num) ?>" data-path="<?php echo esc_url($page_path) ?>"<?php endif; ?>>
-        <?php } else { ?>
-        <div class="blog-posts posts-<?php echo $post_layout ?><?php if ($post_infinite) echo ' infinite-container posts-infinite' ?>"<?php if ($post_infinite) : ?> data-pagenum="<?php echo esc_attr($page_num) ?>" data-pagemaxnum="<?php echo esc_attr($page_max_num) ?>" data-path="<?php echo esc_url($page_path) ?>"<?php endif; ?>>
-        <?php } ?>
 
         <?php $parents_cat_list = get_terms('product-cat', array( 'parent' => 0 ) );
 		    //var_dump($parents_cat_list);
@@ -67,8 +44,30 @@ if ($post_infinite) {
 				foreach( $parents_cat_list as $parent_cats ):
 					$term_id = $parent_cats->term_id;
 					$custom_data = get_term_meta($term_id,'image_field_id');
+                    $child_list = get_term_children($term_id,'product-cat');
 					echo '<li class="custom-post">';
-					echo '<a href="' . get_term_link( $parent_cats ) . '">';
+                    $post_link = get_term_link( $parent_cats );
+                    if (($parent_cats->count == 1)&&(count($child_list)==0)) :
+                        $arg_post = array (
+                            'posts_per_page' => -1,
+                            'post_type' => 'productc',
+                            'order' => 'ASC',
+                            'orderby' => 'ID',
+                            'tax_query' => [
+                                'relation' => 'AND',[
+                                    'taxonomy' => 'product-cat',
+                                    'terms' => $term_id,
+                                    'field' => 'term_id',
+                                    'operator' => 'IN'
+                                ]
+                            ]);
+                        $wpbp = new WP_Query($arg_post );
+                        if ($wpbp->post_count == 1){
+                            $post_link = get_post_permalink($wpbp->posts[0]->ID);
+                        }
+                        wp_reset_query();
+                    endif;
+					echo '<a href="' . $post_link . '">';
 					echo '<img src="'.$custom_data[0]['url'].'">';
 					echo '<span class="custom-cat-title">' . $parent_cats->name . '</span>';
 					echo '<span class="cat-prod-count">';
@@ -83,15 +82,6 @@ if ($post_infinite) {
 				echo'</ul>';
 			}
         ?>
-        <?php if ($post_layout == 'timeline') { ?>
-                </div>
-            </section>
-        <?php } else if ($post_layout == 'grid') { ?>
-            </div>
-        <?php } else { ?>
-        <?php } ?>
-
-        </div>
         <?php wp_reset_postdata(); ?>
     <?php else : ?>
         <h2 class="entry-title"><?php _e( 'Nothing Found', 'porto' ); ?></h2>
@@ -106,5 +96,4 @@ if ($post_infinite) {
             <?php get_search_form(); ?>
         <?php endif; ?>
     <?php endif; ?>
-</div>
 <?php get_footer() ?>

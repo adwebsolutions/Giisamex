@@ -75,7 +75,7 @@ if ('no' !== $loading_overlay && ('yes' === $loading_overlay || ('yes' !== $load
     wp_reset_postdata();
     global $porto_layout, $porto_sidebar;
 
-    $porto_layout = porto_meta_layout();
+    $porto_layout = porto_child_meta_layout();
     $porto_sidebar = porto_meta_sidebar();
     $porto_banner_pos = porto_get_meta_value('banner_pos');
 

@@ -32,33 +32,33 @@ function post_type() {
         'show_ui'               => true,
         'show_in_menu'          => true,
         'query_var'             => true,
-        'rewrite'               => array( 'slug' => __( 'productc' ) ),
+        'rewrite'               => array( 'slug' => 'productc'),
         'capability_type'       => 'post',
         'has_archive'           => true,
         'hierarchical'          => false,
         'menu_position'         => null,
         'supports'              => array( 'title','editor', 'thumbnail', 'excerpt' )
     );
-    register_post_type(__( 'productc' ), $args);
+    register_post_type('productc', $args);
 }
 
 
 
 function product_messages($messages)
 {
-    $messages[__( 'productc' )] =
+    $messages['productc'] =
         array(
             0 => '',
-            1 => sprintf(('Product Updated. <a href="%s">View Product</a>'), esc_url(get_permalink($post_ID))),
+            1 => sprintf(__('Product Updated. <a href="%s">View Product</a>','porto-child'), esc_url(get_permalink($post_ID))),
             2 => __('Custom Field Updated.', 'porto-child' ),
             3 => __('Custom Field Deleted.', 'porto-child' ),
             4 => __('Product Updated.', 'porto-child' ),
-            5 => isset($_GET['revision']) ? sprintf( __('Product Restored To Revision From %s'), wp_post_revision_title((int)$_GET['revision'], false)) : false,
-            6 => sprintf(__('Product Published. <a href="%s">View Product</a>'), esc_url(get_permalink($post_ID))),
+            5 => isset($_GET['revision']) ? sprintf( __('Product Restored To Revision From %s','porto-child'), wp_post_revision_title((int)$_GET['revision'], false)) : false,
+            6 => sprintf(__('Product Published. <a href="%s">View Product</a>','porto-child'), esc_url(get_permalink($post_ID))),
             7 => __('Products Saved.'),
-            8 => sprintf(__('Product Submitted. <a target="_blank" href="%s">Preview Product</a>'), esc_url( add_query_arg('preview', 'true', get_permalink($post_ID)))),
-            9 => sprintf(__('Product Scheduled For: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Product</a>'), date_i18n( __( 'M j, Y @ G:i' ), strtotime($post->post_date)), esc_url(get_permalink($post_ID))),
-            10 => sprintf(__('Product Draft Updated. <a target="_blank" href="%s">Preview Product</a>'), esc_url( add_query_arg('preview', 'true', get_permalink($post_ID)))),
+            8 => sprintf(__('Product Submitted. <a target="_blank" href="%s">Preview Product</a>','porto-child'), esc_url( add_query_arg('preview', 'true', get_permalink($post_ID)))),
+            9 => sprintf(__('Product Scheduled For: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Product</a>','porto-child'), date_i18n( __( 'M j, Y @ G:i' ), strtotime($post->post_date)), esc_url(get_permalink($post_ID))),
+            10 => sprintf(__('Product Draft Updated. <a target="_blank" href="%s">Preview Product</a>','porto-child'), esc_url( add_query_arg('preview', 'true', get_permalink($post_ID)))),
         );
     return $messages;
 
@@ -69,11 +69,11 @@ function product_filter()
 {
     register_taxonomy(
         __( "product-cat" ),
-        array(__( "productc" )),
+        array(__( "productc")),
         array(
             "hierarchical" => true,
-            "label" => __( "Product Categories" ),
-            "singular_label" => __( "Product Category" ),
+            "label" => __( "Product Categories",'porto-child' ),
+            "singular_label" => __( "Product Category",'porto-child' ),
             "query_var" => true,
             "rewrite" => array(
                 'slug' => 'product-cat',

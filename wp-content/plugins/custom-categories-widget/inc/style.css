@@ -14,10 +14,10 @@
 }
 .widget > div > ul, .widget > ul {
     margin-top: 0 !important;
+    border:0 !important;
 }
 .widget > div > ul li > ul, .widget > ul li > ul, .widget > div > ul li > ol, .widget > ul li > ol {
     margin-bottom: 0 !important;
-    margin-left: 20px !important;
 }
 .custom-cat-list {
     margin: 0 15px;
@@ -33,7 +33,7 @@
     font-size: 13px;
     color: #3F4A52;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 0;
 }
 .custom-subcat-list li a{
     font-weight: normal;
@@ -41,30 +41,60 @@
 }
 .custom-subcat-list {
     display: none;
+    border-top: 1px solid #EEEEEE;
+    margin-left: 0 !important;
 }
 .custom-cat-btn {
     width: 20px;
-    height: 40px;
+    height: 20px;
+    position: relative;
+    display: block;
+    float: right;
+    cursor: pointer;
 }
 .custom-cat-btn:after {
-    cursor: hand;
     font-family: FontAwesome;
     display: block;
     position: absolute;
     left: auto;
     right: 0;
-    line-height: 40px;
-    color: red;
+    line-height: 20px;
+    color: #222121;
     width: 20px;
-    height: 40px;
+    height: 20px;
     content: "\f0da";
     top: 0;
 }
-
+.custom-cat-btn.active:after{
+    content: "\f0d7";
+}
 .custom-subcat-btn {
+    position: relative;
     display: block;
-    background: blue;
     width: 20px;
     height: 20px;
-    float: right;
+    float: left;
+}
+.custom-subcat-btn.has-post {
+    cursor: pointer;
+}
+.custom-subcat-btn:after {
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: auto;
+    line-height: 20px;
+    color: #2998CF;
+    width: 20px;
+    height: 20px;
+    content: "\f054";
+    top: 0;
+}
+.custom-subcat-btn.has-post.active:after{
+    content: "\f078";
+}
+.custom-post-list {
+    border-top: 0;
+    margin-left: 20px !important;
 }

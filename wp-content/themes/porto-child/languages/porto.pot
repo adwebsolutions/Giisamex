@@ -1,8 +1,7 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Porto\n"
-"POT-Creation-Date: 2017-04-18 16:49-0400\n"
+"POT-Creation-Date: 2016-10-27 15:33+0800\n"
 "PO-Revision-Date: 2016-10-27 15:33+0800\n"
 "Last-Translator: porto <porto@example.com>\n"
 "Language-Team: porto <porto@example.com>\n"
@@ -10,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -235,7 +234,8 @@ msgstr ""
 #: content-portfolio-gallery.php:219 content-portfolio-large.php:285
 #: content-portfolio-masonry.php:218 content-portfolio-medias.php:210
 #: content-portfolio-medium.php:275 inc/admin/theme_options/settings.php:3612
-#: inc/admin/theme_options/settings.php:3630 inc/content_types/portfolio.php:81
+#: inc/admin/theme_options/settings.php:3630
+#: inc/content_types/portfolio.php:81
 msgid "Location"
 msgstr ""
 
@@ -262,9 +262,9 @@ msgstr ""
 #: content-post-full.php:89 content-post-item-no-image.php:25
 #: content-post-item-no-image.php:40 content-post-item-no-image.php:120
 #: content-post-item-no-image.php:150 content-post-item.php:55
-#: content-post-item.php:82 content-post-item.php:184 content-post-item.php:227
-#: content-post-large-alt.php:91 content-post-large.php:91
-#: content-post-medium.php:99
+#: content-post-item.php:82 content-post-item.php:184
+#: content-post-item.php:227 content-post-large-alt.php:91
+#: content-post-large.php:91 content-post-medium.php:99
 msgid "By"
 msgstr ""
 
@@ -273,9 +273,9 @@ msgstr ""
 #: content-blog-medium.php:120 content-blog-timeline.php:131
 #: content-post-full.php:100 content-post-item-no-image.php:51
 #: content-post-item-no-image.php:83 content-post-item-no-image.php:126
-#: content-post-item.php:93 content-post-item.php:135 content-post-item.php:190
-#: content-post-large-alt.php:102 content-post-large.php:102
-#: content-post-medium.php:110
+#: content-post-item.php:93 content-post-item.php:135
+#: content-post-item.php:190 content-post-large-alt.php:102
+#: content-post-large.php:102 content-post-medium.php:110
 msgid "0 Comments"
 msgstr ""
 
@@ -284,9 +284,9 @@ msgstr ""
 #: content-blog-medium.php:120 content-blog-timeline.php:131
 #: content-post-full.php:100 content-post-item-no-image.php:51
 #: content-post-item-no-image.php:83 content-post-item-no-image.php:126
-#: content-post-item.php:93 content-post-item.php:135 content-post-item.php:190
-#: content-post-large-alt.php:102 content-post-large.php:102
-#: content-post-medium.php:110
+#: content-post-item.php:93 content-post-item.php:135
+#: content-post-item.php:190 content-post-large-alt.php:102
+#: content-post-large.php:102 content-post-medium.php:110
 msgid "1 Comment"
 msgstr ""
 
@@ -295,9 +295,10 @@ msgstr ""
 #: content-blog-medium.php:120 content-blog-timeline.php:131
 #: content-post-full.php:100 content-post-item-no-image.php:51
 #: content-post-item-no-image.php:83 content-post-item-no-image.php:126
-#: content-post-item.php:93 content-post-item.php:135 content-post-item.php:190
-#: content-post-large-alt.php:102 content-post-large.php:102
-#: content-post-medium.php:110 inc/admin/theme_options/settings.php:3099
+#: content-post-item.php:93 content-post-item.php:135
+#: content-post-item.php:190 content-post-large-alt.php:102
+#: content-post-large.php:102 content-post-medium.php:110
+#: inc/admin/theme_options/settings.php:3099
 msgid "Comments"
 msgstr ""
 
@@ -489,7 +490,8 @@ msgstr ""
 #: inc/functions/layout.php:737 inc/functions/layout.php:957
 #: inc/functions/layout.php:959 inc/functions/layout.php:1203
 #: inc/functions/layout.php:1462 inc/functions/layout.php:1556
-#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:35
+#: woocommerce/global/form-login.php:39
+#: woocommerce/myaccount/form-login.php:35
 #: woocommerce/myaccount/form-login.php:61
 msgid "Login"
 msgstr ""
@@ -1514,9 +1516,10 @@ msgstr ""
 #: inc/admin/theme_options/settings.php:3531
 #: inc/admin/theme_options/settings.php:3769
 #: inc/admin/theme_options/settings.php:4056
-#: inc/admin/theme_options/settings.php:4792 inc/content_types/portfolio.php:33
-#: inc/content_types/portfolio.php:128 inc/content_types/portfolio.php:285
-#: inc/content_types/post.php:44 inc/functions/content_type/meta_values.php:78
+#: inc/admin/theme_options/settings.php:4792
+#: inc/content_types/portfolio.php:33 inc/content_types/portfolio.php:128
+#: inc/content_types/portfolio.php:285 inc/content_types/post.php:44
+#: inc/functions/content_type/meta_values.php:78
 #: inc/functions/content_type/meta_values.php:95
 #: inc/functions/content_type/meta_values.php:102
 #: inc/functions/content_type/meta_values.php:203
@@ -3384,11 +3387,13 @@ msgid ""
 "portfolio carousel."
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3631 inc/content_types/portfolio.php:87
+#: inc/admin/theme_options/settings.php:3631
+#: inc/content_types/portfolio.php:87
 msgid "Client Name"
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3632 inc/content_types/portfolio.php:93
+#: inc/admin/theme_options/settings.php:3632
+#: inc/content_types/portfolio.php:93
 msgid "Client URL(Link)"
 msgstr ""
 
@@ -3656,19 +3661,23 @@ msgstr ""
 msgid "Extended"
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3960 inc/content_types/portfolio.php:28
+#: inc/admin/theme_options/settings.php:3960
+#: inc/content_types/portfolio.php:28
 msgid "Slider Type"
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3963 inc/content_types/portfolio.php:34
+#: inc/admin/theme_options/settings.php:3963
+#: inc/content_types/portfolio.php:34
 msgid "Without Thumbs"
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3964 inc/content_types/portfolio.php:35
+#: inc/admin/theme_options/settings.php:3964
+#: inc/content_types/portfolio.php:35
 msgid "With Thumbs"
 msgstr ""
 
-#: inc/admin/theme_options/settings.php:3971 inc/content_types/portfolio.php:45
+#: inc/admin/theme_options/settings.php:3971
+#: inc/content_types/portfolio.php:45
 msgid "Slider Thumbs Count"
 msgstr ""
 
@@ -6921,16 +6930,19 @@ msgstr ""
 msgid "Username or email"
 msgstr ""
 
-#: woocommerce/global/form-login.php:30 woocommerce/myaccount/form-login.php:46
+#: woocommerce/global/form-login.php:30
+#: woocommerce/myaccount/form-login.php:46
 #: woocommerce/myaccount/form-login.php:102
 msgid "Password"
 msgstr ""
 
-#: woocommerce/global/form-login.php:42 woocommerce/myaccount/form-login.php:59
+#: woocommerce/global/form-login.php:42
+#: woocommerce/myaccount/form-login.php:59
 msgid "Remember me"
 msgstr ""
 
-#: woocommerce/global/form-login.php:46 woocommerce/myaccount/form-login.php:48
+#: woocommerce/global/form-login.php:46
+#: woocommerce/myaccount/form-login.php:48
 msgid "Lost your password?"
 msgstr ""
 
