@@ -197,6 +197,14 @@ li.custom-post {
 	padding: 0 5px;
 	display: inline-block;
 }
+@media screen and (max-width: 767px){
+	li.custom-post {
+		width: 80%;
+		margin: 20px 10%;
+		padding: 0 5px;
+		display: inline-block;
+	}
+}
 li.custom-post img {
 	display: block;
 	width: 100%;
