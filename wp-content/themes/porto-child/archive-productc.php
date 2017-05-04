@@ -51,7 +51,7 @@ if ($post_infinite) {
                         $arg_post = array (
                             'posts_per_page' => -1,
                             'post_type' => 'productc',
-                            'order' => 'ASC',
+                            'order' => 'DESC',
                             'orderby' => 'ID',
                             'tax_query' => [
                                 'relation' => 'AND',[

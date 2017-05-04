@@ -178,7 +178,8 @@ function get_related_products($post_id) {
                 'terms' => $item_array
             )
         ),
-        'orderby' => $porto_settings['post-related-orderby']
+        'orderby' => $porto_settings['post-related-orderby'],
+        'order' => 'ASC'
 
     ));
     $query = new WP_Query($args);
@@ -338,3 +339,12 @@ function porto_child_breadcrumbs() {
     return apply_filters('porto_breadcrumbs', $output);
 
 }
+
+function jpen_custom_post_order_sort( $query ){
+    if ( $query->is_main_query() ){
+        $query->set( 'posts_per_page', '-1' );
+        $query->set( 'order' , 'ASC' );
+    }
+}
+add_action( 'pre_get_posts' , 'jpen_custom_post_order_sort' );
+?>
